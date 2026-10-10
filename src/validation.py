@@ -3,7 +3,7 @@
 # IT3091 - Telco Customer Churn
 # Shared Validation Strategy
 #
-# Responsibility: IT24101808
+#Responsibility: IT24101808
 # ==========================================================
 
 from sklearn.model_selection import (

@@ -4,7 +4,6 @@
 # Shared Feature Engineering
 #
 # Responsibility: IT24102178 - Feature Engineering
-# Integration: IT24101808
 # ==========================================================
 
 import pandas as pd

@@ -2,8 +2,6 @@
 # ==========================================================
 # IT3091 - Telco Customer Churn
 # Shared Model Evaluation
-#
-# Responsibility: IT24101808 - Validation
 # Model comparison: All group members
 # ==========================================================
 

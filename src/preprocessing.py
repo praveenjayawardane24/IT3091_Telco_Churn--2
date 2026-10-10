@@ -5,7 +5,6 @@
 #
 # Responsibility: IT24101780 - Common Preprocessing
 # Responsibility: IT24102310 - Scaling
-# Integration: IT24101808
 # ==========================================================
 
 from sklearn.compose import ColumnTransformer
