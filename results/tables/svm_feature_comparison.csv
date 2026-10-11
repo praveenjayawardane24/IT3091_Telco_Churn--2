@@ -1,0 +1,21 @@
+Configuration,Metric,Mean,Std
+Original,F1,0.5857,0.0217
+Original,Recall,0.5344,0.0252
+Original,Precision,0.6487,0.0275
+Original,ROC_AUC,0.8338,0.0131
+Original,Accuracy,0.7994,0.0109
+Original + Balanced,F1,0.5983,0.0064
+Original + Balanced,Recall,0.8355,0.0191
+Original + Balanced,Precision,0.4661,0.005
+Original + Balanced,ROC_AUC,0.8302,0.0126
+Original + Balanced,Accuracy,0.7023,0.0051
+Engineered,F1,0.5506,0.0158
+Engineered,Recall,0.4689,0.0128
+Engineered,Precision,0.6677,0.0316
+Engineered,ROC_AUC,0.8288,0.0133
+Engineered,Accuracy,0.7968,0.0097
+Engineered + Balanced,F1,0.5983,0.0064
+Engineered + Balanced,Recall,0.8355,0.0191
+Engineered + Balanced,Precision,0.4661,0.005
+Engineered + Balanced,ROC_AUC,0.8327,0.0057
+Engineered + Balanced,Accuracy,0.7023,0.0051

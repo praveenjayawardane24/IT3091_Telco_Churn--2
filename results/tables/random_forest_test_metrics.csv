@@ -1,0 +1,6 @@
+Model,Configuration,Metric,Value
+Random Forest,"Tuned RF · n_est=200, depth=None, leaf=10",F1,0.6368
+Random Forest,"Tuned RF · n_est=200, depth=None, leaf=10",Recall,0.7968
+Random Forest,"Tuned RF · n_est=200, depth=None, leaf=10",Precision,0.5302
+Random Forest,"Tuned RF · n_est=200, depth=None, leaf=10",ROC_AUC,0.8454
+Random Forest,"Tuned RF · n_est=200, depth=None, leaf=10",Accuracy,0.7587

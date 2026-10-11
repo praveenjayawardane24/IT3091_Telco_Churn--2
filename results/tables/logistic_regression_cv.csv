@@ -1,0 +1,7 @@
+Configuration,F1,Recall,Precision,ROC_AUC,Accuracy
+Baseline · No balancing,0.5931,0.5438,0.6538,0.8462,0.8025
+Baseline · Random oversampling,0.6278,0.8013,0.5163,0.8457,0.7481
+Baseline · class_weight=balanced,0.6281,0.8013,0.5167,0.846,0.7483
+Engineered · No balancing,0.5936,0.5358,0.6673,0.8465,0.8058
+Engineered · Random oversampling,0.6266,0.7973,0.5163,0.8462,0.748
+Engineered · class_weight=balanced,0.6272,0.7967,0.5175,0.8463,0.7488

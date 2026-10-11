@@ -63,3 +63,111 @@ incorrectly identifying customers as likely to churn.
 
 Status:
 Provisional until the group confirms business priorities.
+
+
+## Decision 05 - Feature Engineering
+
+Decision:
+Retain the 19 original predictors as the baseline.
+Evaluate optional TenureGroup and ServiceCount features.
+
+Evidence:
+Tenure 0-12 months: 47.44% churn.
+Tenure 49-72 months: 9.51% churn.
+ServiceCount and MonthlyCharges correlation: 0.852.
+
+Reason:
+Test whether customer lifecycle and subscription breadth
+provide additional predictive information.
+
+Status:
+Final feature selection pending cross-validation.
+
+
+## Decision 06 - Preprocessing
+
+Decision:
+Use median imputation for numerical features,
+most-frequent imputation and one-hot encoding for
+categorical features, and optional numerical scaling.
+
+Evidence:
+Baseline preprocessing produces 45 columns.
+Engineered preprocessing produces 50 columns.
+Verification found no missing or non-finite values.
+
+Reason:
+Support categorical and numerical predictors consistently.
+Scale numerical features for scale-sensitive models
+such as Logistic Regression and SVM.
+
+Leakage Prevention:
+Fit preprocessing within each cross-validation fold.
+
+
+## Decision 07 - Class Imbalance
+
+Decision:
+Compare no balancing, supported class weighting,
+and random oversampling.
+
+Evidence:
+Training classes before oversampling:
+No churn = 4139; Churn = 1495.
+
+After random oversampling:
+No churn = 4139; Churn = 4139.
+
+Reason:
+Investigate whether imbalance handling improves
+minority-class prediction.
+
+Leakage Prevention:
+Apply oversampling only to training folds.
+
+Status:
+Best strategy not yet determined.
+
+
+## Decision 08 - Evaluation Verification
+
+Decision:
+Use a shared five-fold cross-validation function
+for all four classification models.
+
+Evidence:
+Dummy classifier results:
+Accuracy = 0.7346
+F1 = 0.0000
+Recall = 0.0000
+ROC-AUC = 0.5000
+
+Reason:
+Demonstrates that accuracy alone can be misleading
+when evaluating imbalanced classification problems.
+
+
+## Decision 09 - Initial SVM Kernel Comparison
+
+Decision:
+Prefer the linear kernel provisionally over the
+default RBF kernel for the SVM baseline.
+
+Evidence:
+Linear: F1 = 0.5857; Recall = 0.5344;
+ROC-AUC = 0.8338.
+
+RBF: F1 = 0.5767; Recall = 0.5010;
+ROC-AUC = 0.7977.
+
+Reason:
+Linear SVM performed better on the provisional
+primary metric (F1) and identified more churners.
+
+Limitation:
+The differences have not been tested for
+statistical significance.
+
+Status:
+Provisional; hyperparameter tuning may change
+the preferred kernel.

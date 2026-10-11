@@ -1,0 +1,11 @@
+Kernel,Metric,Mean,Std
+Linear,F1,0.5857,0.0217
+Linear,Recall,0.5344,0.0252
+Linear,Precision,0.6487,0.0275
+Linear,ROC_AUC,0.8338,0.0131
+Linear,Accuracy,0.7994,0.0109
+RBF,F1,0.5767,0.0139
+RBF,Recall,0.501,0.0184
+RBF,Precision,0.6802,0.0189
+RBF,ROC_AUC,0.7977,0.0176
+RBF,Accuracy,0.8049,0.006

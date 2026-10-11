@@ -1,0 +1,6 @@
+Model,Configuration,Metric,Value
+Logistic Regression,Baseline · class_weight=balanced,F1,0.6136
+Logistic Regression,Baseline · class_weight=balanced,Recall,0.7834
+Logistic Regression,Baseline · class_weight=balanced,Precision,0.5043
+Logistic Regression,Baseline · class_weight=balanced,ROC_AUC,0.8416
+Logistic Regression,Baseline · class_weight=balanced,Accuracy,0.7381

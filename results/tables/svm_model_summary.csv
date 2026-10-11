@@ -1,0 +1,2 @@
+Model,Kernel,C,Class_Weight,Engineered_Features,Imbalance_Strategy,F1,Recall,Precision,ROC_AUC,Accuracy
+Support Vector Machine,linear,0.01,balanced,False,class_weight,0.6062,0.8261,0.4791,0.8415,0.7153

@@ -1,0 +1,16 @@
+Strategy,Metric,Mean,Std
+No Balancing,F1,0.5857,0.0217
+No Balancing,Recall,0.5344,0.0252
+No Balancing,Precision,0.6487,0.0275
+No Balancing,ROC_AUC,0.8338,0.0131
+No Balancing,Accuracy,0.7994,0.0109
+Class Weight,F1,0.5983,0.0064
+Class Weight,Recall,0.8355,0.0191
+Class Weight,Precision,0.4661,0.005
+Class Weight,ROC_AUC,0.8302,0.0126
+Class Weight,Accuracy,0.7023,0.0051
+Random Oversampling,F1,0.5983,0.0064
+Random Oversampling,Recall,0.8355,0.0191
+Random Oversampling,Precision,0.4661,0.005
+Random Oversampling,ROC_AUC,0.8279,0.0068
+Random Oversampling,Accuracy,0.7023,0.0051

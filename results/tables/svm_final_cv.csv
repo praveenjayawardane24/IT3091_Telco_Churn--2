@@ -1,0 +1,6 @@
+Metric,Mean,Std
+F1,0.6062,0.0053
+Recall,0.8261,0.024
+Precision,0.4791,0.0072
+ROC_AUC,0.8415,0.0095
+Accuracy,0.7153,0.0072
