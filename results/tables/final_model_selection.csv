@@ -1,0 +1,2 @@
+Selected_Model,Selection_Metric,CV_F1,Reason
+Gradient Boosting,F1,0.6359,Highest observed cross-validation F1-score among the four candidate models.
