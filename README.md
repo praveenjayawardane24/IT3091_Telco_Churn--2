@@ -92,7 +92,8 @@ For a quick setup verification, run `07_evaluation.ipynb`.
 
 - `12_final_model_comparison.ipynb`
 
-Model notebooks can be developed independently using the shared source modules.
+Run notebooks 01 to 12 in order to reproduce the complete set of results.
+The preprocessing steps are fitted inside each cross-validation fold through the shared model pipeline.
 
 ## Shared Python Modules
 
@@ -112,18 +113,37 @@ Model notebooks can be developed independently using the shared source modules.
 - Random state: 42
 - Training/testing split: 80/20 stratified
 - Model selection: Stratified five-fold cross-validation
-- Primary metric: F1-score (provisional)
+- Primary metric: F1-score
 - Supporting metrics: Recall, precision, ROC-AUC, accuracy
 - Fit preprocessing and oversampling inside training folds
 - Do not use the held-out test set for tuning
 
 ## Current Progress
 
-**Completed:** Data understanding, cleaning, EDA, validation, feature engineering, preprocessing, imbalance utilities, and shared evaluation.
+All 12 notebooks have been completed and executed. The generated tables and figures are available in the `results/` folder.
 
-**In progress:** Individual model development.
+## Final Model Comparison
 
-**Pending:** Final model comparison, held-out test evaluation, business recommendations, and final report.
+| Model | CV F1 | Recall | Precision | ROC-AUC | Accuracy |
+|---|---:|---:|---:|---:|---:|
+| Gradient Boosting | **0.6359** | 0.8074 | 0.5248 | **0.8490** | 0.7547 |
+| Random Forest | 0.6352 | 0.7839 | **0.5342** | 0.8476 | **0.7611** |
+| Logistic Regression | 0.6281 | 0.8013 | 0.5167 | 0.8460 | 0.7483 |
+| SVM | 0.6062 | **0.8261** | 0.4791 | 0.8415 | 0.7153 |
+
+Gradient Boosting was selected because it achieved the highest mean F1-score using standard stratified five-fold cross-validation.
+
+### Final Held-Out Test Results
+
+- Accuracy: 0.7459
+- Precision: 0.5138
+- Recall: 0.7941
+- F1-score: 0.6239
+- ROC-AUC: 0.8447
+
+The detailed comparison is saved in `results/tables/final_model_comparison.csv`. The selected model and final test results are recorded in `final_model_selection.csv` and `final_test_metrics.csv`.
+
+Trained `.joblib` files are generated locally in `results/models/`. This folder is excluded from Git because the model files can be recreated by running the notebooks.
 
 ## Reproducibility and AI Use
 
